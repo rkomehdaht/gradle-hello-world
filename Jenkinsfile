@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent slave1
     tools { 
         gradle 'gradle4'
     }
@@ -11,9 +11,13 @@ pipeline {
       }
       stage('build') {
         steps {
-          echo "Path is" + env.PATH
           sh "gradle build"
         }
       }
+       stage('badge') {
+        steps {
+          addBadge(icon: 'completed.gif', text: 'OK'
+        }
+       }
     }
 }
