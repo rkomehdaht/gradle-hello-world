@@ -25,17 +25,17 @@ pipeline{
             parallel{
                 stage ('Test1'){
                     steps{
-                        sh "test-data/int-test.sh 'build/libs/oto-gradle-1.0.jar' 'otoMato' 'Hello Otomato!'"
+                        sh "sh test-data/int-test.sh 'build/libs/oto-gradle-1.0.jar' 'otoMato' 'Hello Otomato!'"
                     }
                 }
                 stage ('Test2'){
                     steps{
-                        sh "test-data/int-test.sh 'build/libs/oto-gradle-1.0.jar' 'ruslan' 'Hello Ruslan!'"
+                        sh "sh test-data/int-test.sh 'build/libs/oto-gradle-1.0.jar' 'ruslan' 'Hello Ruslan!'"
                     }
                 }
                 stage ('Test3'){
                     steps{
-                        sh "test-data/int-test.sh 'build/libs/oto-gradle-1.0.jar' 'piatrovich' 'Hello Piatrovich!'"
+                        sh "sh test-data/int-test.sh 'build/libs/oto-gradle-1.0.jar' 'piatrovich' 'Hello Piatrovich!'"
                     }
                 }
             }
