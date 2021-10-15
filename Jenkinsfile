@@ -13,7 +13,7 @@ pipeline{
    		}
    		stage ('build'){
             steps{
-      	        sh "gradle build"
+      	        sh "gradle clean build"
             }
    		}
         stage ('Unit-test'){
