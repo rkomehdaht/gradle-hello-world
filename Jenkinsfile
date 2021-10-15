@@ -50,8 +50,8 @@ pipeline{
             addBadge(icon: 'error.gif', text: 'Error')
         }
         always {
-            archiveArtifacts 'reports/*.xml'
-	    junit 'reports/*.xml'
+            archiveArtifacts 'test-data/*.xml'
+	    junit 'test-data/*.xml'
         }
     }
 }
