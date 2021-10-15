@@ -26,13 +26,19 @@ pipeline{
         stage ('Func-test'){
             parallel{
                 stage ('Test1'){
-                    sh "test-data/int-test.shbuild/libs/oto-gradle-1.0.jar otoMato 'Hello Otomato!'"
+                    steps{
+                        sh "test-data/int-test.shbuild/libs/oto-gradle-1.0.jar otoMato 'Hello Otomato!'"
+                    }
                 }
                 stage ('Test2'){
-                    sh "test-data/int-test.shbuild/libs/oto-gradle-1.0.jar ruslan 'Hello Ruslan!'"
+                    steps{
+                        sh "test-data/int-test.shbuild/libs/oto-gradle-1.0.jar ruslan 'Hello Ruslan!'"
+                    }
                 }
                 stage ('Test3'){
-                    sh "test-data/int-test.shbuild/libs/oto-gradle-1.0.jar piatrovich 'Hello Piatrovich!'"
+                    steps{
+                        sh "test-data/int-test.shbuild/libs/oto-gradle-1.0.jar piatrovich 'Hello Piatrovich!'"
+                    }
                 }
             }
         }
