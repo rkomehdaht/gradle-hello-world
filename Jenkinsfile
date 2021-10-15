@@ -19,8 +19,6 @@ pipeline{
         stage ('Unit-test'){
             steps{
                 sh "gradle test"
-                junit 'reports/*.xml'
-                archiveArtifacts 'reports/*.xml'
             }
         }
         stage ('Func-test'){
