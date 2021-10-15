@@ -1,5 +1,7 @@
 pipeline {
-    agent slave1
+    agent {
+        slave1
+    }
     tools { 
         gradle 'gradle4'
     }
@@ -16,7 +18,7 @@ pipeline {
       }
        stage('badge') {
         steps {
-          addBadge(icon: 'completed.gif', text: 'OK')
+            addBadge(icon: 'completed.gif', text: 'OK')
         }
        }
     }
