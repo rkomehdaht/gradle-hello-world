@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        slave1
+        label 'slave1'
     }
     tools { 
         gradle 'gradle4'
